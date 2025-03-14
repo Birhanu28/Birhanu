@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Image with JavaScript</title>
+    <style>
+        body{
+            background: url(https://github.com/Birhanu28/Birhanu/blob/main/BG%201.jpg?raw=true);
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+          
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        
+        #links {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 13%;
+          margin-top: -10px;
+          margin-bottom: 20px;
+          font-family: georgia;
+          padding-top: 0;
+          padding-bottom: 0.1%;
+          background: url(https://github.com/Birhanu28/Birhanu/blob/main/BG%201.jpg?raw=true);
+          background-size: 100.99%;
+          background-repeat: no-repeat;
+          /* background: linear-gradient(60deg, navy, transparent); */
+          justify-content: flex-end;
+          align-items: center;
+          margin-right: 5%;
+          position: fixed;
+          background-attachment: scroll;
+          z-index: 1000;
+        }
+        #myLogo{
+          
+          padding: 0;
+          margin: 0;
+          font-size: 60px;
+          margin-right: 56%;
+          margin-left: 2%;
+          color: rgb(2, 76, 235);
+          text-decoration: none;
+          border: 1px dotted navy;
+          border-radius: 100%;
+          justify-content: center;
+          background: darkmagenta;
+          width: 15px;
+          height: 5px;
+          padding: 5px;
+          box-shadow: -5px -5px 7px rgb(56, 1, 158),
+          5px -5px 7px rgb(56, 1, 158),
+          5px 5px 7px rgb(56, 1, 158),
+          -5px 5px 7px rgb(56, 1, 158),
+          0px 0px 7px rgb(56, 1, 158);
+        }
+        .navLinks{
+          margin-right: 3%;
+          text-decoration: none;
+          color: rgb(0, 110, 255);
+          font-size: 15px;
+          padding: 5px;
+          background: linear-gradient(
+            -45deg, transparent 50%,
+            rgb(33, 1, 119) 35%,
+           rgb(255, 99, 71));
+          background-size: 250% 100%;
+          background-position: 100% -100%;
+          transition: .3s ease-in;
+        }
+        .navLinks:hover {
+          aspect-ratio: 70px/70px;
+          background-position: 0 0;
+          border-bottom: 2px groove blueviolet;
+          border-radius: 10px;
+          padding: 9px;
+          margin-right: 2%;
+          text-decoration: none;
+          color: rgb(7, 238, 255);
+          font-size: 15px;
+          border-right: 2px groove blueviolet;
+          box-shadow: 5px 5px 1px rgb(2, 2, 129),
+          0px 5px 1px  rgb(2, 2, 129),
+          5px 0px 1px  rgb(2, 2, 129);
+        }
+        .navLinks:focus {
+          
+          background-color: rgb(33, 1, 119);
+          border: 2px groove blueviolet;
+          padding: 7px;
+          text-decoration: none;
+          color: rgb(47, 132, 243);
+          font-size: 15px;
+          border-right: 2px groove blueviolet;
+          box-shadow: -5px -5px 7px rgb(56, 1, 158),
+          5px -5px 7px rgb(56, 1, 158),
+          5px 5px 7px rgb(56, 1, 158),
+          -5px 5px 7px rgb(56, 1, 158),
+          0px 0px 7px rgb(56, 1, 158);
+          
+        }
+        .navLinks:active {
+          
+          background-color: rgb(33, 1, 119);
+          border: 2px groove blueviolet;
+          padding: 7px;
+          text-decoration: none;
+          color: rgb(47, 132, 243);
+          font-size: 15px;
+          border-right: 2px groove blueviolet;
+          box-shadow: -5px -5px 7px rgb(56, 1, 158),
+          5px -5px 7px rgb(56, 1, 158),
+          5px 5px 7px rgb(56, 1, 158),
+          -5px 5px 7px rgb(56, 1, 158),
+          0px 0px 7px rgb(56, 1, 158);
+          
+        }
+        main{
+          margin-top: 10%;
+        }
+       
+        #myName{
+          font-family: serif;
+          color: transparent;
+          font-weight: 700;
+          margin-top: -10px;
+          margin-bottom: -10px;
+          padding: none;
+          font-size: 40px;
+          background: linear-gradient(-45deg, 
+          aqua,
+          purple,
+          violet,
+          aquamarine,
+          red,
+          tomato,
+          orange,
+          yellow,
+          tomato,
+          red,
+          aquamarine,
+          violet,
+          purple,
+          aqua);
+          background-clip: text;
+          background-size: 200% 100%;
+          animation: NameBG 2s infinite linear;
+        }
+        @keyframes NameBG {
+          from{
+            background-position: 0 0;
+          }
+          to{
+            background-position: 100% 0;
+          }
+        }
+        #wellcomeText{
+          font-family: Georgia;
+          font-size: 70px;
+          font-weight: 900;
+          text-align: center;
+          color: transparent;
+          background: linear-gradient(45deg, rgb(20, 56, 255) 50%, rgb(255, 70, 37) 50%);
+          background-clip: text;
+          background-size: 300% 300%;
+          transition: 2s;
+        }
+       #wejjcomeText{
+        background-position: top right;
+       }
+        #myPhoto {
+          height: 210px;
+          width: auto;
+          display: inline-block;
+          border: hidden;
+          border-radius: 100%/100%;
+          background: url(https://github.com/devbre-28/bre-images/blob/main/brebg.jpg?raw=true);
+          float: inline-start;
+          margin-right: 50px;
+          animation: slide 7s infinite linear;
+        }
+        @keyframes slide{
+          0%{
+            background-position: top right;
+          }
+          25%{
+            background-position: bottom right;
+          }
+          50%{
+            background-position: bottom left;
+          }
+          75%{
+            background-position: top left;
+          }
+          100%{
+            background-position: top right;
+          }
+        }
+        #telegramLink{
+          
+        }
+        #telegramLogo{
+          height: 5vh;
+          width: 30px;
+          transform: translate(470px,-200px);
+        }
+        p{
+          width: 300px;
+          margin-left: 210px;
+          color: rgb(248, 136, 8);
+          margin-top: 20px;
+        }
+        @media screen and(max-width:00px) {
+        h4 {
+            color: rgb(255, 38, 0);
+          }
+        }
+        #background{
+        top: 0;
+        left: 0;
+        height: 100%; 
+        width: 100%;
+        filter: blur(0px);
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+      }
+    </style>
+</head>
+<body>
+    
+      <div id="background"></div>
+      <header id="links">
+        <a id="myLogo"">𝓑</a>
+        <a href="#homeContent" class="navLinks">HOME</a>
+        <a href="#" class="navLinks">PROJECTS</a>
+        <a href="#" class="navLinks">ABOUT</a>
+        <a href="#" class="navLinks">CONTACT</a>
+        
+      </header>
+      <main>
+      <img src="https://github.com/devbre-28/bre-images/blob/main/birhanuPhotos.png?raw=true" alt="my photo" id="myPhoto">
+ 
+      <div>
+        <h4 style="font-size: 30px;color: rgb(26, 7, 136);">Hello, I'm </h4><br>
+        <div id="myName">
+
+           Birhanu Woldeab
+          
+          </div>
+
+                 <h1 id="wellcomeText">Wellcome to my personal <br> portfolio</h1>
+
+      <div id="homeContent" class="home">
+         
+      </div>
+          
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
